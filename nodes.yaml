@@ -1,0 +1,180 @@
+---
+nodes: {
+  centos-8:
+  { box: 'centos/8_1',
+    ip: "192.168.32.10",
+    ports: [
+      { host: 2022, guest: 22 }
+    ],
+    cmrole: 'master',
+    memory: 1024,
+    bootstrap: "bootstrap-el6.sh",
+    foldersync: "virtualbox"
+  },
+  ubuntu-18:
+  { box: 'ubuntu/bionic64',
+    ip: "192.168.32.11",
+    ports: [
+      { host: 2023, guest: 22 }
+    ],
+    cmrole: 'master',
+    memory: 1024,
+    bootstrap: "bootstrap-el6.sh",
+    foldersync: "virtualbox"
+  },
+  amazon-2:
+  { box: 'amazon-2',
+    ip: "192.168.32.12",
+    ports: [
+      { host: 2025, guest: 22 }
+    ],
+    cmrole: 'master',
+    memory: 1024,
+    bootstrap: "bootstrap-el7.sh",
+    foldersync: "virtualbox"
+  },
+  debian-9:
+  { box: 'debian/9_11',
+    ip: "192.168.32.13",
+    ports: [
+      { host: 2026, guest: 22 }
+    ],
+    cmrole: 'master',
+    memory: 1024,
+    bootstrap: "bootstrap-el7.sh",
+    foldersync: "virtualbox"
+  },
+  coreos:
+    { box: 'amam/coreos-stable',
+      ip: "192.168.32.14",
+      ports: [
+        { host: 2027, guest: 22 }
+      ],
+      cmrole: 'master',
+      memory: 1024,
+      bootstrap: "bootstrap-el7.sh",
+      foldersync: "virtualbox"
+    },
+  freebsd:
+    { box: 'freeBSD/12-1',
+      ip: "192.168.32.15",
+      ports: [
+        { host: 2028, guest: 22 }
+      ],
+      cmrole: 'master',
+      memory: 1024,
+      bootstrap: "bootstrap-el7.sh",
+      foldersync: "rsync"
+    },
+  ubuntu-16:
+  { box: 'ubuntu/xenial64',
+    ip: "192.168.32.16",
+    ports: [
+      { host: 2029, guest: 22 }
+    ],
+    cmrole: 'master',
+    memory: 1024,
+    bootstrap: "bootstrap-el6.sh",
+    foldersync: "virtualbox"
+  },
+  ubuntu-18a:
+  { box: 'ubuntu/18-04-06',
+    ip: "192.168.32.17",
+    ports: [
+      { host: 2030, guest: 22 }
+    ],
+    cmrole: 'master',
+    memory: 1024,
+    bootstrap: "bootstrap-el6.sh",
+    foldersync: "virtualbox"
+  },
+  opensuse:
+  { box: 'opensuse/15-1',
+    ip: "192.168.32.17",
+    ports: [
+      { host: 2031, guest: 22 }
+    ],
+    cmrole: 'master',
+    memory: 1024,
+    bootstrap: "bootstrap-el6.sh",
+    foldersync: "virtualbox"
+  },
+  centos-6:
+  { box: 'centos/6',
+    ip: "192.168.32.18",
+    ports: [
+      { host: 2032, guest: 22 }
+    ],
+    cmrole: 'master',
+    memory: 1024,
+    bootstrap: "bootstrap-el6.sh",
+    foldersync: "rsync"
+  },
+  ubuntu-14:
+  { box: 'ubuntu/trusty64',
+    ip: "192.168.32.19",
+    ports: [
+      { host: 2033, guest: 22 }
+    ],
+    cmrole: 'master',
+    memory: 1024,
+    bootstrap: "bootstrap-el6.sh",
+    foldersync: "virtualbox"
+  },
+  redhat-8:
+  { box: 'redhat/8-1',
+    ip: "192.168.32.20",
+    ports: [
+      { host: 2034, guest: 22 }
+    ],
+    cmrole: 'master',
+    memory: 1024,
+    bootstrap: "bootstrap-el6.sh",
+    foldersync: "virtualbox"
+  },
+  scilinux-6:
+  { box: 'ringo/scientific-linux-6.8',
+    ip: "192.168.32.21",
+    ports: [
+      { host: 2035, guest: 22 }
+    ],
+    cmrole: 'master',
+    memory: 1024,
+    bootstrap: "bootstrap-el6.sh",
+    foldersync: "rsync"
+  },
+  centos-7:
+  { box: 'centos/7-7',
+    ip: "192.168.32.22",
+    ports: [
+      { host: 2036, guest: 22 }
+    ],
+    cmrole: 'master',
+    memory: 1024,
+    bootstrap: "bootstrap-el6.sh",
+    foldersync: "virtualbox"
+  },
+  scilinux-7:
+  { box: 'scientific/7-7' ,
+    ip: "192.168.32.23",
+    ports: [
+      { host: 2037, guest: 22 }
+    ],
+    cmrole: 'master',
+    memory: 1024,
+    bootstrap: "bootstrap-el6.sh",
+    foldersync: "virtualbox"
+  },
+  nfsserve:
+  { box: 'centos/8_1',
+    ip: "192.168.32.24",
+    ports: [
+      { host: 2038, guest: 22 }
+    ],
+    cmrole: 'master',
+    memory: 1024,
+    initialize: "nfsserve.sh",
+    bootstrap: "bootstrap-el6.sh",
+    foldersync: "virtualbox"
+  }
+ }
