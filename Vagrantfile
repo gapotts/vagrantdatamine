@@ -13,7 +13,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # config.ssh.password   = 'vagrant'
   # config.proxy.http     = "http://10.162.14.16:8080"
   # config.proxy.https    = "http://10.162.14.16:8080"
-  # config.proxy.no_proxy = "localhost,127.0.0.1,salt01.lab1.ariba.com"
 
   nodes_config.each_pair do |vmname, vmspec |
 
@@ -51,7 +50,18 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
           shell.path = 'sshagent.sh'
           shell.privileged = false
         end
-        #puts vmspec['bootstrap2']
+      end
+
+      if !vmspec['bootstrap'].nil?
+        config.vm.provision :shell do |shell|
+          shell.path = vmspec['bootstrap']
+        end
+      end
+
+      if !vmspec['cfgmgmt'].nil?
+        config.vm.provision :shell do |shell|
+          shell.path = vmspec['cfgmgmt']
+        end
       end
 
       config.vm.provision :hosts do |host|

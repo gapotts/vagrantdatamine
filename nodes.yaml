@@ -8,7 +8,7 @@ nodes: {
     ],
     cmrole: 'master',
     memory: 1024,
-    bootstrap: "bootstrap-el6.sh",
+    #bootstrap: "bootstrap-el6.sh",
     foldersync: "virtualbox"
   },
   ubuntu-18:
@@ -19,7 +19,7 @@ nodes: {
     ],
     cmrole: 'master',
     memory: 1024,
-    bootstrap: "bootstrap-el6.sh",
+    bootstrap: "fixsshd.sh",
     foldersync: "virtualbox"
   },
   amazon-2:
@@ -30,7 +30,7 @@ nodes: {
     ],
     cmrole: 'master',
     memory: 1024,
-    bootstrap: "bootstrap-el7.sh",
+    #bootstrap: "bootstrap-el7.sh",
     foldersync: "virtualbox"
   },
   debian-9:
@@ -41,7 +41,7 @@ nodes: {
     ],
     cmrole: 'master',
     memory: 1024,
-    bootstrap: "bootstrap-el7.sh",
+    #bootstrap: "bootstrap-el7.sh",
     foldersync: "virtualbox"
   },
   coreos:
@@ -52,7 +52,7 @@ nodes: {
       ],
       cmrole: 'master',
       memory: 1024,
-      bootstrap: "bootstrap-el7.sh",
+      #bootstrap: "bootstrap-el7.sh",
       foldersync: "virtualbox"
     },
   freebsd:
@@ -63,7 +63,7 @@ nodes: {
       ],
       cmrole: 'master',
       memory: 1024,
-      bootstrap: "bootstrap-el7.sh",
+      #bootstrap: "bootstrap-el7.sh",
       foldersync: "rsync"
     },
   ubuntu-16:
@@ -74,7 +74,7 @@ nodes: {
     ],
     cmrole: 'master',
     memory: 1024,
-    bootstrap: "bootstrap-el6.sh",
+    #bootstrap: "bootstrap-el6.sh",
     foldersync: "virtualbox"
   },
   ubuntu-18a:
@@ -85,7 +85,7 @@ nodes: {
     ],
     cmrole: 'master',
     memory: 1024,
-    bootstrap: "bootstrap-el6.sh",
+    #bootstrap: "bootstrap-el6.sh",
     foldersync: "virtualbox"
   },
   opensuse:
@@ -96,7 +96,7 @@ nodes: {
     ],
     cmrole: 'master',
     memory: 1024,
-    bootstrap: "bootstrap-el6.sh",
+    #bootstrap: "bootstrap-el6.sh",
     foldersync: "virtualbox"
   },
   centos-6:
@@ -107,7 +107,7 @@ nodes: {
     ],
     cmrole: 'master',
     memory: 1024,
-    bootstrap: "bootstrap-el6.sh",
+    #bootstrap: "bootstrap-el6.sh",
     foldersync: "rsync"
   },
   ubuntu-14:
@@ -118,7 +118,7 @@ nodes: {
     ],
     cmrole: 'master',
     memory: 1024,
-    bootstrap: "bootstrap-el6.sh",
+    #bootstrap: "bootstrap-el6.sh",
     foldersync: "virtualbox"
   },
   redhat-8:
@@ -129,7 +129,7 @@ nodes: {
     ],
     cmrole: 'master',
     memory: 1024,
-    bootstrap: "bootstrap-el6.sh",
+    #bootstrap: "bootstrap-el6.sh",
     foldersync: "virtualbox"
   },
   scilinux-6:
@@ -140,7 +140,7 @@ nodes: {
     ],
     cmrole: 'master',
     memory: 1024,
-    bootstrap: "bootstrap-el6.sh",
+    #bootstrap: "bootstrap-el6.sh",
     foldersync: "rsync"
   },
   centos-7:
@@ -151,7 +151,7 @@ nodes: {
     ],
     cmrole: 'master',
     memory: 1024,
-    bootstrap: "bootstrap-el6.sh",
+    #bootstrap: "bootstrap-el6.sh",
     foldersync: "virtualbox"
   },
   scilinux-7:
@@ -162,7 +162,7 @@ nodes: {
     ],
     cmrole: 'master',
     memory: 1024,
-    bootstrap: "bootstrap-el6.sh",
+    #bootstrap: "bootstrap-el6.sh",
     foldersync: "virtualbox"
   },
   nfsserve:
@@ -174,7 +174,8 @@ nodes: {
     cmrole: 'master',
     memory: 1024,
     initialize: "nfsserve.sh",
-    bootstrap: "bootstrap-el6.sh",
+    cfgmgmt: "rh_saltserver.sh",
+    #bootstrap: "bootstrap-el6.sh",
     foldersync: "virtualbox"
   }
  }
